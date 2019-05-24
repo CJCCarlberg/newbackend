@@ -1,0 +1,52 @@
+yarn run v1.16.0
+$ node www.js
+Max session age: 10800000ms
+(node:26036) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+HTTP server listening on port 3000
+(node:26036) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+serializeUser runs
+Someone sends a register request
+serializeUser runs
+TypeError: Cannot read property 'toLowerCase' of null
+    at router.post (/home/cj.c.carlberg/newbackend/backend/controllers/auth.js:59:41)
+    at Layer.handle [as handle_request] (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:174:3)
+    at router (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:317:13)
+    at /home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:275:10)
+    at SessionStrategy.strategy.pass (/home/cj.c.carlberg/newbackend/backend/node_modules/passport/lib/middleware/authenticate.js:338:9)
+An e-mail has been sent to cj@castencarlberg.se with further instructions.
+serializeUser runs
+An e-mail has been sent to cj@castencarlberg.se with further instructions.
+Someone sends a register request
+serializeUser runs
+TypeError: Cannot read property 'toLowerCase' of null
+    at router.post (/home/cj.c.carlberg/newbackend/backend/controllers/auth.js:59:41)
+    at Layer.handle [as handle_request] (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:174:3)
+    at router (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:317:13)
+    at /home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/cj.c.carlberg/newbackend/backend/node_modules/express/lib/router/index.js:275:10)
+    at SessionStrategy.strategy.pass (/home/cj.c.carlberg/newbackend/backend/node_modules/passport/lib/middleware/authenticate.js:338:9)
+serializeUser runs
+Terminated
+error Command failed with exit code 143.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
