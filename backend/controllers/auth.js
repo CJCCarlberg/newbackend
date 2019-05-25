@@ -1,6 +1,7 @@
 const express = require('express')
 const passport = require('passport')
 const Account = require('../models/account')
+const path = require('path')
 const router = express.Router()
 const async = require('async');
 const { check, validationResult } = require('express-validator/check')
@@ -217,3 +218,7 @@ router.get('/reset/:token', function(req, res) {
       user.resetPasswordExpires = undefined;
       }
     })})
+
+  router.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/../webpage.html'));
+  });
