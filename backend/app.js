@@ -1,7 +1,10 @@
 const express = require('express')
 const session = require('express-session')
+const path = require('path')
 const morgan = require('morgan')
+
 const bodyParser = require('body-parser')
+
 const mongoose = require('mongoose')
 const nodemailer = require('nodemailer');
 const passport = require('passport')
@@ -14,8 +17,10 @@ const statisticsController = require('./controllers/statistics')
 
 const app = express()
 
+app.engine('html', require('ejs').renderFile);
+
 // uncomment after placing your favicon in /public
-// app.use(favicon(__dirname + '/public/favicon.ico'))
+//app.use(favicon(__dirname + '/public/favicon.png'))
 
 if (process.env.NODE_ENV === 'development' || process.env.DEBUG) app.use(morgan('dev'))
 
@@ -91,8 +96,20 @@ app.use('/', authController)
 app.use('/', statisticsController)
 
 app.get('/ping', function(req, res) {
-  res.status(200).send('pong!')
+  res.status(200).send('<h1>pong!</h1>')
 })
+
+var hello = "this is a hello message";
+
+app.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/views/website/index.html'), {hello: "hello this is webpage", message: "you look gr8 now get out!"})//{BASE_URL : path.join(__dirname)});
+});
+
+app.get('/test', function(req, res){
+  res.render('testsite.html');
+});
+
+//Add {message: 'message'} above in render() to send data, use ejs inside <%= message  %>
 
 // error handlers
 

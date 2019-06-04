@@ -195,17 +195,17 @@ function(req, res, next) {
 router.get('/reset/:token', function(req, res) {
   Account.findOne({ username: tempUser.username }, function(err, user) {
       if (req.params.token != tempUser.resetPasswordToken) {
-      return res.status(403).json({message: 'Password reset token is invalid.'})
+      return res.status(403).render('./website/index.html', {hello: 'Hi', message: 'Password reset token is invalid.'})
     }
     else if (Date.now() > user.resetPasswordExpires){
-      res.status(400).json({message: 'Password reset token has expired.'})
+      res.status(400).render('./website/index.html', {hello: 'Hi', message: 'Password reset token has expired.'})
     }
     else {
       Account.findByUsername(user.username).then(function(user){
     if (user){
         user.setPassword(tempPass, function(){
             user.save();
-            res.status(200).json({message: 'Password reset successful!'});
+            res.status(200).render('.website/index.html', {message: 'Password reset successful!'});
             tempUser = null;
             tempPass = null;
         });
@@ -220,6 +220,4 @@ router.get('/reset/:token', function(req, res) {
       }
     })})
 
-router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/../webpage.html'));
-});
+	

@@ -50,3 +50,18 @@ serializeUser runs
 Terminated
 error Command failed with exit code 143.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+yarn run v1.16.0
+$ node www.js
+Max session age: 10800000ms
+(node:31124) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+HTTP server listening on port 3000
+(node:31124) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+yarn run v1.16.0
+$ node www.js
+Max session age: 10800000ms
+(node:31160) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+HTTP server listening on port 3000
+(node:31160) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Terminated
+error Command failed with exit code 143.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
